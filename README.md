@@ -1,6 +1,6 @@
 # machinelearning-101
 
-## Sparse Matrix Multiplication 
+## Sparse Matrix Multiplication (Math concept)
 
 ### The question
 
