@@ -25,6 +25,10 @@ matrix_b =  [
 print(sparse_matrix_multiply(matrix_a, matrix_b))
 </code>
 
+### The solution 
+
+See sparse-matrix-multiplication.py
+
 ### Why it matters? 
 
 A sparse matrix is a matrix in which most of the elements are zero. 
