@@ -21,8 +21,7 @@ matrix_a = [
    [0, 0, 4],
   ]
 
-Sample Output:
-     [
+Sample Output:[
    [0, 0, 0],
    [0, 0, 20],
    ]
