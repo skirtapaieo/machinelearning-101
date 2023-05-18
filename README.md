@@ -37,4 +37,6 @@ Sparse matrices appear in many real-world situations, including:
 - In text data, where a matrix might represent word frequencies in documents. Most words only appear in a small fraction of documents, so the document-term matrix is sparse.
 - In scientific computing, when solving partial differential equations over a three-dimensional domain, the matrix that represents the domain is usually sparse.
 
-Sparse matrices are important because storing and manipulating them in a naive way can be very inefficient. For example, if you store a sparse matrix as a standard two-dimensional array, you'll waste a lot of space storing zeros. Similarly, if you perform operations on a sparse matrix as though it were dense, you'll waste a lot of time multiplying by and adding zeros. This is why special data structures and algorithms for sparse matrices have been developed.
+Sparse matrices are important because storing and manipulating them in a naive way can be very inefficient. For example, if you store a sparse matrix as a standard two-dimensional array, you'll waste a lot of space storing zeros. 
+
+Similarly, if you perform operations on a sparse matrix as though it were dense, you'll waste a lot of time multiplying by and adding zeros. This is why special data structures and algorithms for sparse matrices have been developed.
