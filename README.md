@@ -10,7 +10,7 @@ Take advantage of that to reduce the  number of total computations that your fun
 
 If the matrices can't be multiplied together, your function should return [[]]. 
 
-´´´
+<code>
 matrix_a = [
     [0, 2, 0], 
     [0, -3, 5],
@@ -21,4 +21,4 @@ matrix_b =  [
    [0, 0, 4],
 ]
 print(sparse_matrix_multiply(matrix_a, matrix_b))
-  ´´´ 
+</code>
