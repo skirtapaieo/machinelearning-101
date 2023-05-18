@@ -14,15 +14,11 @@ If the matrices can't be multiplied together, your function should return [[]].
 matrix_a = [
     [0, 2, 0], 
     [0, -3, 5],
-  ]
-  matrix_b =  [
+]
+matrix_b =  [
    [0, 10, 0],
    [0, 0, 0],
    [0, 0, 4],
-  ]
-
-Sample Output:[
-   [0, 0, 0],
-   [0, 0, 20],
-   ]
+]
+print(sparse_matrix_multiply(matrix_a, matrix_b))
   ´´´ 
