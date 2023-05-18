@@ -1,6 +1,8 @@
 # machinelearning-101
 
-## Sparse Matrix Multiplication (Math concept)
+# Math Concept 
+
+## Sparse Matrix Multiplication
 
 ### The question
 
@@ -44,3 +46,5 @@ Sparse matrices appear in many real-world situations, including:
 Sparse matrices are important because storing and manipulating them in a naive way can be very inefficient. For example, if you store a sparse matrix as a standard two-dimensional array, you'll waste a lot of space storing zeros. 
 
 Similarly, if you perform operations on a sparse matrix as though it were dense, you'll waste a lot of time multiplying by and adding zeros. This is why special data structures and algorithms for sparse matrices have been developed.
+
+# Model Concept 
