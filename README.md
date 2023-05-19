@@ -209,7 +209,7 @@ class TestStatistics(unittest.TestCase):
 
 Here is an example of multiprocessing. 
 
-```
+```python
 from multiprocessing import Pool
 
 # define your data
