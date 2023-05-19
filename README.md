@@ -53,9 +53,12 @@ Similarly, if you perform operations on a sparse matrix as though it were dense,
 
 Write a function that takes in a list of numbers and returns a dictionary.  
 
-The dictionary should 
+´´´
+input_list = [2,1,3,4,4,5,6,7]
+´´´
 
-The following statistics about the numbers: 
+The dictionary should have statistics about: 
+
 - the mean, 
 - median, 
 - mode, 
@@ -63,10 +66,23 @@ The following statistics about the numbers:
 - sample standard deviation, 
 - and 95% confidence interval for the mean.
 
-Note that: 
-- You can assume that the given list contains a large-enough number of samples from a population to use a z-score of  1.96.
-- If there's more than one mode, your function can return any of them.
-- You shouldn't use any libraries.
+A sample output: 
+
+´´´
+{
+  "mean": 4.0, 
+  "median": 4.0,
+  "mode": 4.0,
+  "sample_variance": 4.0,
+  "sample_standard deviation": 2.0, 
+  "mean_confidence interval": [2.6141, 5.3859],
+}
+´´´
+
+In addition:  
+- Assume that the given list contains a large-enough number of samples from a population to use a z-score of  1.96.
+- If there's more than one mode, the function can return any of them.
+- No use of libraries.
 - Your output values will automatically be rounded to the fourth decimal.
 
 
