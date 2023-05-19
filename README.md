@@ -83,7 +83,11 @@ In addition:
 
 ## The Solution 
 
-The solution is straightforward based on the six statistics needed, there are several things that should be addee in a real-life case. The code in get-statistics was used at Algoexpert but there are several other things to do to make it behave in practise: 
+The solution is straightforward based on the six statistics needed, there are several things that should be addee in a real-life case. 
+
+## Solution improvement ideas 
+
+The code in get-statistics was used at Algoexpert but there are several other things to do to make it behave in practise: 
 
 - Error handling and logging - 
 - Validation (decorator) - imported wraps
