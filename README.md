@@ -47,6 +47,25 @@ Sparse matrices are important because storing and manipulating them in a naive w
 
 Similarly, if you perform operations on a sparse matrix as though it were dense, you'll waste a lot of time multiplying by and adding zeros. This is why special data structures and algorithms for sparse matrices have been developed.
 
+## Get statistics 
+
+### The prompt 
+
+Write a function that takes in a list of numbers and returns a dictionary containing the following statistics about the numbers: 
+- the mean, 
+- median, 
+- mode, 
+- sample variance,
+- sample standard deviation, 
+- and 95% confidence interval for the mean.
+
+Note that: 
+- You can assume that the given list contains a large-enough number of samples from a population to use a z-score of  1.96.
+- If there's more than one mode, your function can return any of them.
+- You shouldn't use any libraries.
+- Your output values will automatically be rounded to the fourth decimal.
+
+
 # 2 Model Concepts 
 
 ## K Nearest Neighbors
