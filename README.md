@@ -1,10 +1,20 @@
 # machinelearning-101
 
+This is based on the problems in Algoexperts Machine Experts training. 
+
+The problem with those exercises is that they are designed to pass coding interviews. 
+
+The solutions that are passing are MVP's, that might be optimized in many ways before reaching production. 
+
+Still a lot of the issues around managing data is not managed here either, which sometimes is 90% of the problem. 
+
+
+
 # 1 Math Concepts 
 
 ## 1.1 Sparse Matrix Multiplication
 
-### The question
+### The Problem 
 
 Write a function that takes two integer matrices and multiplies them together. 
 
