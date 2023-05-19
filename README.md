@@ -47,11 +47,15 @@ Sparse matrices are important because storing and manipulating them in a naive w
 
 Similarly, if you perform operations on a sparse matrix as though it were dense, you'll waste a lot of time multiplying by and adding zeros. This is why special data structures and algorithms for sparse matrices have been developed.
 
-## 1.2 Get statistics 
+## 1.2 Get satistics 
 
-### The prompt 
+### The problem  
 
-Write a function that takes in a list of numbers and returns a dictionary containing the following statistics about the numbers: 
+Write a function that takes in a list of numbers and returns a dictionary.  
+
+The dictionary should 
+
+The following statistics about the numbers: 
 - the mean, 
 - median, 
 - mode, 
