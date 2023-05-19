@@ -2,12 +2,11 @@
 
 This is based on the problems in Algoexperts Machine Experts training. 
 
-The problem with those exercises is that they are designed to pass coding interviews. 
+The "problem" with those exercises is that they are designed to pass coding interviews. 
 
-The solutions that are passing are MVP's, that might be optimized in many ways before reaching production. 
+The solutions that are passing could be seen as "MVP's", that might be optimized in many ways before reaching production. 
 
-Still a lot of the issues around managing data is not managed here either, which sometimes is 90% of the problem. 
-
+I try to optimize the solutions a bit, but a lot of the issues in reality is related to data quality. 
 
 
 # 1 Math Concepts 
@@ -97,6 +96,9 @@ The solution is straightforward based on the six statistics needed, there are se
 
 ## Solution improvement ideas 
 
+
+### Introduction 
+
 The code in get-statistics was used at Algoexpert but there are several other things to do to make it behave in practise: 
 
 - Error handling and logging - 
@@ -107,6 +109,8 @@ The code in get-statistics was used at Algoexpert but there are several other th
 - Documentation addid docstring for Sphinx to use 
 - Code style - PEP8 is followed 
 - Concurrency and parallelism - the computations could be made parallel using multiprocessing 
+
+### Modified code 
 
 ```python
 import logging
@@ -199,6 +203,57 @@ class TestStatistics(unittest.TestCase):
         self.assertEqual(calculate_mode(self.data), 5)
 
     def test_sample_variance
+```
+
+### Multiprocessing 
+
+Here is an example of multiprocessing. 
+
+```
+from multiprocessing import Pool
+
+# define your data
+data = [
+    [1, 2, 3, 4, 5, 5],
+    [6, 7, 8, 9, 10],
+    [11, 12, 13, 14, 15, 15]
+]
+
+# define your statistics functions, as before
+def calculate_mean(data):
+    return sum(data) / len(data)
+
+def calculate_median(data):
+    data.sort()
+    middle_index = len(data) // 2
+    if len(data) % 2 == 0:
+        return (data[middle_index - 1] + data[middle_index]) / 2
+    else:
+        return data[middle_index]
+
+def calculate_mode(data):
+    counts = {num: data.count(num) for num in data}
+    return max(counts.keys(), key=lambda x: counts[x])
+
+def calculate_statistics(input_list):
+    return {
+        "mean": calculate_mean(input_list),
+        "median": calculate_median(input_list),
+        "mode": calculate_mode(input_list),
+    }
+
+# define a function to process each list
+def process_list(input_list):
+    return calculate_statistics(input_list)
+
+# create a multiprocessing Pool
+with Pool() as pool:
+    results = pool.map(process_list, data)
+
+# print the results
+for i, result in enumerate(results):
+    print(f"Statistics for list {i+1}: {result}")
+
 ```
 
 
