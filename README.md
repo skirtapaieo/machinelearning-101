@@ -53,9 +53,7 @@ Similarly, if you perform operations on a sparse matrix as though it were dense,
 
 Write a function that takes in a list of numbers and returns a dictionary.  
 
-<code>
-input_list = [2,1,3,4,4,5,6,7]
-</code>
+<code>input_list = [2,1,3,4,4,5,6,7]</code>
 
 The dictionary should have statistics about: 
 
@@ -68,16 +66,14 @@ The dictionary should have statistics about:
 
 A sample output: 
 
-<code>
-{
+<code>{
   "mean": 4.0, 
   "median": 4.0,
   "mode": 4.0,
   "sample_variance": 4.0,
   "sample_standard deviation": 2.0, 
   "mean_confidence interval": [2.6141, 5.3859],
-}
-</code>
+}</code>
 
 In addition:  
 - Assume that the given list contains a large-enough number of samples from a population to use a z-score of  1.96.
@@ -98,7 +94,6 @@ import logging
 from functools import wraps
 import unittest
 
-// Set up the logger
 logging.basicConfig(level=logging.INFO)
 
 def validate_input(func):
