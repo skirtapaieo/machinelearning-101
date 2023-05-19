@@ -2,7 +2,7 @@
 
 # 1 Math Concepts 
 
-## Sparse Matrix Multiplication
+## 1.1 Sparse Matrix Multiplication
 
 ### The question
 
@@ -47,7 +47,7 @@ Sparse matrices are important because storing and manipulating them in a naive w
 
 Similarly, if you perform operations on a sparse matrix as though it were dense, you'll waste a lot of time multiplying by and adding zeros. This is why special data structures and algorithms for sparse matrices have been developed.
 
-## Get statistics 
+## 1.2 Get statistics 
 
 ### The prompt 
 
