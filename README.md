@@ -90,14 +90,14 @@ In addition:
 - No use of libraries.
 - Your output values will automatically be rounded to the fourth decimal.
 
-## The Solution 
+### The Solution 
 
 The solution is straightforward based on the six statistics needed, there are several things that should be addee in a real-life case. 
 
-## Solution improvement ideas 
+### Solution improvement ideas 
 
 
-### Introduction 
+#### Introduction 
 
 The code in get-statistics was used at Algoexpert but there are several other things to do to make it behave in practise: 
 
@@ -110,7 +110,7 @@ The code in get-statistics was used at Algoexpert but there are several other th
 - Code style - PEP8 is followed 
 - Concurrency and parallelism - the computations could be made parallel using multiprocessing 
 
-### Modified code 
+#### Modified code 
 
 ```python
 import logging
@@ -205,7 +205,7 @@ class TestStatistics(unittest.TestCase):
     def test_sample_variance
 ```
 
-### Multiprocessing 
+#### Multiprocessing 
 
 Here is an example of multiprocessing. 
 
