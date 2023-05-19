@@ -47,7 +47,7 @@ Sparse matrices are important because storing and manipulating them in a naive w
 
 Similarly, if you perform operations on a sparse matrix as though it were dense, you'll waste a lot of time multiplying by and adding zeros. This is why special data structures and algorithms for sparse matrices have been developed.
 
-## 1.2 Get ssatistics 
+## 1.2 Get Statistics 
 
 ### The Problem  
 
@@ -83,11 +83,16 @@ In addition:
 
 ## The Solution 
 
-The solution is straightforward based on the six statistics needed, there are several things that should be addee in a real-life case: 
+The solution is straightforward based on the six statistics needed, there are several things that should be addee in a real-life case. The code in get-statistics was used at Algoexpert but there are several other things to do to make it behave in practise: 
 
-- Logging 
+- Error handling and logging - 
 - Validation (decorator) - imported wraps
 - Test cases (Algoexpert had 15 for this function)
+- Performance - the mode function and the sorted list could be fixed
+- Memory usage - when the list is long it makes sense to not have the full list in memory 
+- Documentation addid docstring for Sphinx to use 
+- Code style - PEP8 is followed 
+- Concurrency and parallelism - the computations could be made parallel using multiprocessing 
 
 ```python
 import logging
