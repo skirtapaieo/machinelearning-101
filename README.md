@@ -8,6 +8,18 @@ The solutions that are passing could be seen as "MVP's", that might be optimized
 
 I try to optimize the solutions a bit, but a lot of the issues in reality is related to data quality. 
 
+# machinelearning-101
+
+## Index
+
+- [1 Math Concepts](#1-math-concepts)
+  - [1.1 Sparse Matrix Multiplication](#11-sparse-matrix-multiplication)
+  - [1.2 Get Statistics](#12-get-statistics)
+
+- [2 Model Concepts](#2-model-concepts)
+  - [K Nearest Neighbors](#k-nearest-neighbors)
+
+
 
 # 1 Math Concepts 
 
