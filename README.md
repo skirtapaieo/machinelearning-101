@@ -47,9 +47,9 @@ Sparse matrices are important because storing and manipulating them in a naive w
 
 Similarly, if you perform operations on a sparse matrix as though it were dense, you'll waste a lot of time multiplying by and adding zeros. This is why special data structures and algorithms for sparse matrices have been developed.
 
-## 1.2 Get satistics 
+## 1.2 Get ssatistics 
 
-### The problem  
+### The Problem  
 
 Write a function that takes in a list of numbers and returns a dictionary.  
 
@@ -84,6 +84,109 @@ In addition:
 - If there's more than one mode, the function can return any of them.
 - No use of libraries.
 - Your output values will automatically be rounded to the fourth decimal.
+
+## The Solution 
+
+The solution is straightforward based on the six statistics needed, there are several things that should be addee in a real-life case: 
+
+- Logging 
+- Validation (decorator) - imported wraps
+- Test cases (Algoexpert had 15 for this function)
+
+´´´
+import logging
+from functools import wraps
+import unittest
+
+# Set up the logger
+logging.basicConfig(level=logging.INFO)
+
+def validate_input(func):
+    @wraps(func)
+    def wrapper(data):
+        if not isinstance(data, (list, tuple)):
+            logging.error("Input should be of type list or tuple.")
+            raise TypeError("Input should be of type list or tuple.")
+        if len(data) == 0:
+            logging.error("Input list cannot be empty.")
+            raise ValueError("Input list cannot be empty.")
+        for i in data:
+            if not isinstance(i, (int, float)):
+                logging.error("All elements in the input list should be numbers.")
+                raise ValueError("All elements in the input list should be numbers.")
+        return func(data)
+    return wrapper
+
+@validate_input
+def calculate_mean(data):
+    return sum(data) / len(data)
+
+@validate_input
+def calculate_median(data):
+    # Sorting a list can be memory-intensive for large lists
+    data.sort()
+    middle_index = len(data) // 2
+    if len(data) % 2 == 0:
+        return (data[middle_index - 1] + data[middle_index]) / 2
+    else:
+        return data[middle_index]
+
+@validate_input
+def calculate_mode(data):
+    # This method of calculating the mode has a time complexity of O(n^2), which could be slow for large lists
+    counts = {num: data.count(num) for num in data}
+    return max(counts.keys(), key=lambda x: counts[x])
+
+@validate_input
+def calculate_sample_variance(data, mean):
+    return sum((num - mean) ** 2 for num in data) / (len(data) - 1)
+
+def calculate_standard_deviation(sample_variance):
+    return sample_variance ** 0.5
+
+def calculate_confidence_interval(mean, standard_deviation, sample_size):
+    standard_error = standard_deviation / (sample_size ** 0.5)
+    margin_of_error = 1.96 * standard_error
+    return [mean - margin_of_error, mean + margin_of_error]
+
+@validate_input
+def get_statistics(input_list):
+    sorted_input = sorted(input_list)
+    mean = calculate_mean(sorted_input)
+    median = calculate_median(sorted_input)
+    mode = calculate_mode(sorted_input)
+    sample_variance = calculate_sample_variance(sorted_input, mean)
+    sample_standard_deviation = calculate_standard_deviation(sample_variance)
+    mean_confidence_interval = calculate_confidence_interval(mean, sample_standard_deviation, len(sorted_input))
+    
+    return {
+        "mean": mean,
+        "median": median,
+        "mode": mode,
+        "sample_variance": sample_variance,
+        "sample_standard_deviation": sample_standard_deviation,
+        "mean_confidence_interval": mean_confidence_interval
+    }
+
+
+// Test cases
+class TestStatistics(unittest.TestCase):
+
+    def setUp(self):
+        self.data = [1, 2, 3, 4, 5, 5]
+
+    def test_mean(self):
+        self.assertEqual(calculate_mean(self.data), 3.3333333333333335)
+
+    def test_median(self):
+        self.assertEqual(calculate_median(self.data), 3.5)
+
+    def test_mode(self):
+        self.assertEqual(calculate_mode(self.data), 5)
+
+    def test_sample_variance
+
+´´´
 
 
 # 2 Model Concepts 
