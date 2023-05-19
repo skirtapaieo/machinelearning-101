@@ -89,7 +89,7 @@ The solution is straightforward based on the six statistics needed, there are se
 - Validation (decorator) - imported wraps
 - Test cases (Algoexpert had 15 for this function)
 
-<code>
+```python
 import logging
 from functools import wraps
 import unittest
@@ -164,7 +164,7 @@ def get_statistics(input_list):
     }
 
 
-// Test cases
+# Test cases
 class TestStatistics(unittest.TestCase):
 
     def setUp(self):
@@ -180,7 +180,7 @@ class TestStatistics(unittest.TestCase):
         self.assertEqual(calculate_mode(self.data), 5)
 
     def test_sample_variance
-</code>
+```
 
 
 # 2 Model Concepts 
